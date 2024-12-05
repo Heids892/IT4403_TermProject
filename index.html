@@ -13,6 +13,15 @@
         <h1>Movie Search</h1>
         <input type="text" id="search-input" placeholder="Search for a movie...">
         <button id="search-button">Search</button>
+        <div class="sorting">
+            <label for="sort-select">Sort By:</label>
+            <select id="sort-select">
+                <option value="popular">Popular</option>
+                <option value="top_rated">Top Rated</option>
+                <option value="upcoming">Upcoming</option>
+            </select>
+            <button id="sort-button">Sort</button>
+        </div>
     </header>
 
     <div id="movie-container"></div>

@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1em;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+#search-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Movie Container */
+#movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Individual Movie */
+.movie {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.movie h3 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.movie p {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #aaa;
+    height: 60px; /* Consistent description box height */
+    overflow: hidden; /* Hide overflow text */
+}
+
+/* "Read More" Link */
+.movie .read-more {
+    display: block;
+    margin-top: 10px;
+    color: #007BFF;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.movie .read-more:hover {
+    text-decoration: underline;
+}
+
+/* No Movies Found */
+#movie-container p {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #search-input {
+        width: 250px;
+    }
+
+    #search-button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #search-input {
+        width: 200px;
+    }
+
+    #search-button {
+        font-size: 0.85em;
+        padding: 8px 12px;
+    }
+
+    .movie {
+        width: 160px;
+        padding: 15px;
+    }
+}
